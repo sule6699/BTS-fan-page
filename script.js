@@ -63,19 +63,6 @@ document.getElementById("submitBtnArabic").addEventListener("click", function() 
 
     
 
-    function submitWish(language) {
-        var userAnswer;
-        if (language === 'english') {
-            userAnswer = document.getElementById("userAnswer2").value;
-        } else if (language === 'arabic') {
-            userAnswer = document.getElementById("userAnswerArabic").value;
-        }
-
-        // Process or store the wish data on the server if needed
-
-        // Redirect to the Thank You page
-        window.location.href = "thankyou.html";
-    }
 
 
   
