@@ -1,3 +1,21 @@
+function toggleMembers() {
+    var memberNames = document.getElementById("member-names");
+
+    if (memberNames.style.display === "none" || memberNames.style.display === "") {
+        memberNames.style.display = "block";
+    } else {
+        memberNames.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
+
 let currentLanguage = 'en';
 
 function switchLanguage(language) {
@@ -38,31 +56,59 @@ function checkAnswer(answer) {
 
 // You can add more functions as needed
   
-      // Get all buttons in the section
-      var buttons = document.querySelectorAll('.section button');
+// Get all buttons in the section
+var buttons = document.querySelectorAll('.section button');
 
 // Add click event listener to each button
 buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        // Toggle the background color of the clicked button between green and default
-        if (this.style.backgroundColor === 'green') {
-            this.style.backgroundColor = ''; // Set to default color
+  button.addEventListener('click', function() {
+    // Toggle the background color of the clicked button between green and default
+    if (this.style.backgroundColor === 'green') {
+      this.style.backgroundColor = ''; // Set to default color
+    } else {
+      this.style.backgroundColor = 'green';
+    }
+  });
+});
+
+
+// here 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  let submitBtn = document.getElementById('submitBtnThankYou');
+  let thankYouMessage = document.getElementById('thankYouMessage');
+
+  submitBtn.addEventListener('click', function () {
+      // Show the Thank You message
+      thankYouMessage.style.display = 'block';
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this for the icon menu to work with arab and english button 
+
+function toggleMembers() {
+    var memberNames = document.querySelectorAll('.member-names');
+
+    memberNames.forEach(function (names) {
+        if (names.style.display === "none") {
+            names.style.display = "block";
         } else {
-            this.style.backgroundColor = 'green';
+            names.style.display = "none";
         }
     });
-});
-
-document.getElementById("submitBtnEnglish").addEventListener("click", function() {
-    submitWish('english');
-});
-
-document.getElementById("submitBtnArabic").addEventListener("click", function() {
-    submitWish('arabic');
-});
-
-    
-
-
-
-  
+}
