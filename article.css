@@ -199,3 +199,19 @@ p {
     overflow-x: hidden;
     }
 }
+
+
+@media (max-width: 767px) {
+#english-content h4,
+#arabic-content h4 {
+    width: 200px; /* Adjust the width as needed */
+    height: 140px; /* Same as width for a square shape */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 0;
+}
+}
